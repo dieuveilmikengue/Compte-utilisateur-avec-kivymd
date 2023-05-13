@@ -1,0 +1,71 @@
+<Profil>
+    name: "profil"
+
+    MDScrollView:
+
+        MDBoxLayout:
+            spacing: "25dp"
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+            cols: 1
+            padding: 10, 15
+            halign: "center"
+            orientation: "vertical"
+
+
+            MDSmartTile:
+                radius: 100
+                # box_radius: [0, 100, 75, 75]
+                source: "mike.png"
+                size_hint: None, None
+                size: "100dp", "100dp"
+                pos_hint: {"center_x": .5}
+                box_color: 0, 0, 0, 0
+
+            MDLabel:
+                text: "Mike Lebaké"
+                font_style: "H6"
+                bold: True
+                color: 1, 1, 1, 1
+                halign: "center"
+                pos_hint: {"center_x": 0.5}
+
+
+            MDFillRoundFlatButton:
+                text: "Modifier le compte"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                text_color: 1, 1, 1, 1
+                elevation: 3
+                font_size: 20
+                font_size:"12dp"
+
+            MDList:
+                TwoLineListItem:
+                    text: "Nom"
+                    secondary_text: "Mike"
+                TwoLineListItem:
+                    text: "Prénom"
+                    secondary_text: "Lebake"
+                TwoLineListItem:
+                    text: "Email"
+                    secondary_text: "coderavecp@gmail.com"
+                TwoLineListItem:
+                    text: "Fonction"
+                    secondary_text: "Developpeur Python"
+
+
+            MDFillRoundFlatButton:
+                text: "Se déconnecter"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                text_color: 1, 1, 1, 1
+                elevation: 3
+                font_size: 20
+                md_bg_color: 0.1, 0.3, 1, 1
+                font_size:"12dp"
+                on_press: root.manager.current = 'connexion'
+
+
+

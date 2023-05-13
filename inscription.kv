@@ -1,0 +1,130 @@
+<Inscription>
+    name: "inscription"
+
+    ScrollView:
+
+        MDBoxLayout:
+            spacing: "25dp"
+            size_hint_y: None
+            height: self.minimum_height
+            width: self.minimum_width
+            cols: 1
+            padding: 10, 15
+            halign: "center"
+            orientation: "vertical"
+
+
+            MDSmartTile:
+                radius: 100
+                # box_radius: [0, 100, 75, 75]
+                source: "user.png"
+                size_hint: None, None
+                size: "100dp", "100dp"
+                pos_hint: {"center_x": .5}
+                box_color: 0, 0, 0, 0
+
+            MDLabel:
+                text: "Inscription"
+                font_style: "H6"
+                bold: True
+                color: 1, 1, 1, 1
+                halign: "center"
+                pos_hint: {"center_x": 0.5}
+
+
+            MDTextField:
+                hint_text: "Nom"
+                mode: "rectangle"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                font_size:"12dp"
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Vous devez remplir ce champ"
+                icon_right_color: app.theme_cls.primary_color
+
+            MDTextField:
+                hint_text: "Prenom"
+                mode: "rectangle"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                font_size:"12dp"
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Vous devez remplir ce champ"
+                icon_right_color: app.theme_cls.primary_color
+                
+            MDTextField:
+                hint_text: "Votre adress mail"
+                mode: "rectangle"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                font_size:"12dp"
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Vous devez remplir ce champ"
+                icon_right_color: app.theme_cls.primary_color
+
+            MDTextField:
+                hint_text: "Date de naissaince"
+                validator: "date"
+                date_format: "dd/mm/yyyy"
+                mode: "rectangle"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                font_size:"12dp"
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Enter a valid dd/mm/yyyy date"
+                icon_right_color: app.theme_cls.primary_color
+
+
+            MDTextField:
+                hint_text: "Mot de passe"
+                mode: "rectangle"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: .9
+                password: True
+                icon_right: "lock"
+                font_size:"12dp"
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Vous devez remplir ce champ"
+                icon_right_color: app.theme_cls.primary_color
+
+            MDTextField:
+                hint_text: "Confirmer le mot de passe"
+                mode: "rectangle"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: .9
+                password: True
+                icon_right: "lock"
+                font_size: "10dp"
+                required: True
+                helper_text_mode: "on_error"
+                helper_text: "Vous devez remplir ce champ"
+                icon_right_color: app.theme_cls.primary_color
+
+            MDFillRoundFlatButton:
+                text: "S'inscription"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                text_color: 1, 1, 1, 1
+                elevation: 3
+                font_size: 20
+                font_size:"12dp"
+                on_press: root.manager.current = 'connexion'
+
+            MDFillRoundFlatButton:
+                text: "Se connecter"
+                pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                size_hint_x: 0.9
+                text_color: 1, 1, 1, 1
+                elevation: 3
+                font_size: 20
+                md_bg_color: 0.1, 0.3, 1, 1
+                font_size:"12dp"
+                on_press: root.manager.current = 'connexion'
+
+
+
